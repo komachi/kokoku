@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>kokoku.js</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello.css" /><!--[if IE 7]>
+    <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+    <style type="text/css">#indiesocial-init > a {margin:3px;} #indiesocial-init {margin:20px;}</style>
+    <link rel="kokoku" href="/kokoku.json" type="application/json" />
+    <script type="text/javascript" src="js/kokoku.min.js"></script>
+    <script type="text/javascript" src="js/indiesocial.min.js"></script>
+  </head>
+  <body>
+        <div class="container">
+      <div class="page-header text-center">
+        <h1>kokoku.js</h1>
+        <small>japanese: 広告, means <i>advertisement</i></small>
+        <h3>Simple JavaScript ad rotator</h3>
+        <a href="https://github.com/komachi/kokoku" class="btn btn-primary btn-lg">View project on GitHub</a>
+        <a href="https://github.com/komachi/kokoku/zipball/master" class="btn btn-lg">Download kokoku.js</a>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Privacy</h3>
+            </div>
+            <div class="panel-body">
+              kokoku.js doesn't require any foreign scripts. Don't let ad networks track data of your clients.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Size</h3>
+            </div>
+            <div class="panel-body">
+              kokoku.js is less than 1 KB minified and gzipped.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Browser support</h3>
+            </div>
+            <div class="panel-body">
+              kokoku.js works in every modern browser.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Multilingual ads</h3>
+            </div>
+            <div class="panel-body">
+              If you have a multilingual website, you can load banners in the local language of your visitors.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Free and open source</h3>
+            </div>
+            <div class="panel-body">
+              Source code released under terms of <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">Creative Commons Zero 1.0</a>.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Easy to use</h3>
+            </div>
+            <div class="panel-body">
+              All ads will be in a simple JSON file. You need only put <code>div</code> in place where you want to see ads.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">How to use</h3>
+          <div class="well">
+            <ol>
+              <li>Load kokoku.js<br /><code>&lt;script src="kokoku.js"&gt;&lt;/script&gt;</code></li>
+              <li>Create JSON file with your ads<br />
+                <pre>
+{
+  "ad1": {
+    "lang": "any",
+    "code": "&lt;a href='http://komachi.github.io/kokoku.js'>&lt;h1>kokoku.js is awesome!&lt;/h1>&lt;/a&gt;",
+    "ping": "http://example.com/ad?id=ad1"
+  },
+  "ad2": {
+    "lang": "en",
+    "code": "&lt;h1>fff&lt;/h1>"
+  }
+}
+                </pre>
+                <code>lang</code> is a language of the ad. Can be set to <code>any</code>. For language detection kokoku.js use <code>document.documentElement.lang</code><br />
+                <code>code</code> is a code of the banner.<br />
+                <code>ping</code> is an URL which will requested after banner load.<br />
+              </li>
+              <li>Load that json<br /><code>&lt;link rel="kokoku" href="kokoku.json" type="application/json" /&gt;</code></li>
+              <li>
+                Put a <code>div</code> where you want to see banner<br /><code>&lt;div data-kokoku="ad1,ad2"&gt;&lt;div&gt;</code><br />
+                <code>data-kokoku</code> contain a comma separated list of banners which you want use. One of that banners will be loaded. Can be set to <code>any</code>.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <footer class="row text-center">
+        <h4>Demo:</h4>
+        <div class="col-md-6" data-kokoku="kokoku1,kokoku2"></div>
+        <div class="col-md-6" data-kokoku="indiesocial,imgbi"></div>
+      </footer>
+      <div id="indiesocial-init" class="text-center" data-indieSocialServices="all" data-addFontelloIcon="true" data-URL="http://komachi.github.io/kokoku" data-title="kokoku.js is a simple javascript ad rotator"></div>
+    </div>
+  </body>
+</html>
