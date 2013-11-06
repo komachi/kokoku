@@ -1,0 +1,18 @@
+{
+  "kokoku1": {
+    "lang": "en",
+    "code": "<a href='http://komachi.github.io/kokoku'><img src='images/web20.gif' /></a>"
+  },
+  "kokoku2": {
+    "lang": "en",
+    "code": "<a href='http://komachi.github.io/kokoku'><img src='images/kokoku.png' /></a>"
+  },
+  "indiesocial": {
+    "lang": "any",
+    "code": "<a href='http://komachi.github.io/indiesocial'><img src='images/indiesocial.png' /></a>"
+  },
+  "imgbi": {
+    "lang": "any",
+    "code": "<a href='https://img.bi'><img src='images/imgbi.png' /></a>"
+  }
+}
