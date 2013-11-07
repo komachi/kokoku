@@ -10,8 +10,7 @@ else {
 function kokoku() {
   var links = document.getElementsByTagName('link'),
   i = links.length,
-  lang = document.documentElement.lang,
-  put = [];
+  lang = document.documentElement.lang;
   while (i--) {
     var rel = (links[i].getAttribute('rel') || '');
     if (rel == 'kokoku') {
@@ -27,6 +26,7 @@ function kokoku() {
         kokokus = document.querySelectorAll('[data-kokoku]'),
         i = kokokus.length;
         while (i--) {
+          var put = [];
           var which = kokokus[i].dataset.kokoku;
           if (which == 'any') {
             for (value in json) {
