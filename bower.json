@@ -1,0 +1,19 @@
+{
+  "name": "kokoku",
+  "main": "kokoku.js",
+  "homepage": "http://komachi.github.io/kokoku/",
+  "description": "Simple JavaScript ad rotator",
+  "keywords": [
+    "ads",
+    "kokoku",
+    "adversting",
+    "banner"
+  ],
+  "authors": [
+    "Anton Nesterov"
+  ],
+  "license": "CC0",
+  "ignore": [
+    "**/.*"
+  ]
+}
